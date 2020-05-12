@@ -12,6 +12,11 @@
           </e>
         </e>
         <e p="GameComponents" t="Include">
+          <e p="CameraScripts" t="Include">
+            <e p="Zoom" t="Include">
+              <e p="CameraZoom.cs" t="Include" />
+            </e>
+          </e>
           <e p="Extensions" t="Include">
             <e p="GameObjectExtensions.cs" t="Include" />
             <e p="TransformExtensions.cs" t="Include" />
@@ -33,6 +38,9 @@
             </e>
           </e>
           <e p="Tragectory" t="Include">
+            <e p="AutoCalculateVelocity" t="Include">
+              <e p="Launcher.cs" t="Include" />
+            </e>
             <e p="Scripts" t="Include">
               <e p="Arrow.cs" t="Include" />
               <e p="ArrowResistance.cs" t="Include" />
@@ -43,6 +51,9 @@
               <e p="IArrowTarget.cs" t="Include" />
               <e p="Player.cs" t="Include" />
               <e p="TrajectoryRenderer.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="HandleCutOffShader.cs" t="Include" />
             </e>
           </e>
         </e>
