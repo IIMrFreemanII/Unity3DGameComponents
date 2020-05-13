@@ -15,7 +15,6 @@ public class Bow : MonoBehaviour
 
     [SerializeField] private Vector3 maxStretch = new Vector3(0, 0, -0.35f);
 
-    [SerializeField] private bool isStretching;
     [SerializeField] private bool isCancelStretching;
     
     [SerializeField] private float stretchStrength = 10f;
@@ -58,8 +57,6 @@ public class Bow : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                isStretching = true;
-
                 currentArrowTrans.localPosition =
                     Vector3.Slerp(currentArrowLocPos, maxStretch, Time.deltaTime * stretchStrength);
                 
@@ -72,8 +69,6 @@ public class Bow : MonoBehaviour
             }
             else
             {
-                isStretching = false;
-                
                 if (Input.GetMouseButtonUp(0))
                 {
                     Fire();
@@ -82,8 +77,6 @@ public class Bow : MonoBehaviour
         }
         else
         {
-            isStretching = false;
-            
             Vector3 startArrowPos = Vector3.zero;
             
             currentArrowTrans.localPosition =
