@@ -2,13 +2,13 @@
 
 public class Launcher : MonoBehaviour
 {
-    [SerializeField] private Rigidbody projectileRb;
-    [SerializeField] private Transform targetTransform;
+    [SerializeField] private Rigidbody projectileRb = null;
+    [SerializeField] private Transform targetTransform = null;
 
     [SerializeField] private float hDisplacement = 25f;
     [SerializeField] private float gravity = -18f;
 
-    [SerializeField] private bool debugPath;
+    [SerializeField] private bool debugPath = true;
     [SerializeField] private int drawPathResolution = 40;
     
     private void Start()
@@ -48,8 +48,9 @@ public class Launcher : MonoBehaviour
             return new LaunchData();
         }
 
-        float time = Mathf.Sqrt(-2 * hDisplacement / gravity) +
-                     Mathf.Sqrt(2 * (displacementY - hDisplacement) / gravity);
+        float timeToTop = Mathf.Sqrt(-2 * hDisplacement / gravity);
+        float timeFromTopToTarget = Mathf.Sqrt(2 * (displacementY - hDisplacement) / gravity);
+        float time = timeToTop + timeFromTopToTarget;
 
         Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * hDisplacement);
         Vector3 velocityXZ = displacementXZ / time;
