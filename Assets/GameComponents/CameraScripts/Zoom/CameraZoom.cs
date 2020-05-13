@@ -4,7 +4,7 @@ public class CameraZoom : MonoBehaviour
 {
     public bool zooming;
     public float zoomSpeed = 1f;
-    public Camera camera;
+    public new Camera camera;
 
     void Update() {
         if (zooming) {
