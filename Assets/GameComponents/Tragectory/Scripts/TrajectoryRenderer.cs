@@ -14,9 +14,12 @@ public class TrajectoryRenderer : MonoBehaviour
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
     }
-
-    public void ShowTrajectory(Vector3 origin, Vector3 speed)
+    
+    public void ShowTrajectory(Vector3 startPos, Vector3 initialVelocity)
     {
         Vector3[] points = new Vector3[lineSegments];
         lineRenderer.positionCount = points.Length;
@@ -25,7 +28,7 @@ public class TrajectoryRenderer : MonoBehaviour
         {
             float time = i * Time.fixedDeltaTime;
 
-            points[i] = origin + speed * time + Physics.gravity * time * time / 2f;
+            points[i] = startPos + initialVelocity * time + Physics.gravity * (time * time) / 2f;
 
             if (points[i].y < 0)
             {

@@ -105,7 +105,6 @@ public class Bow : MonoBehaviour
             StartCoroutine(SetTimeout(reloadTime, () =>
             {
                 currentArrow = Instantiate(arrowPrefab, arrowSpawnPosition.position, arrowSpawnPosition.rotation, arrowSpawnPosition);
-                
             }));
         }
     }

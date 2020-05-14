@@ -38,6 +38,14 @@
             </e>
           </e>
           <e p="Tragectory" t="Include">
+            <e p="ArcherTopDownController" t="Include">
+              <e p="Archer" t="Include">
+                <e p="ArcherTopDownController.cs" t="Include" />
+                <e p="ArrowPosition.cs" t="Include" />
+                <e p="Bow.cs" t="Include" />
+                <e p="BowTopDownController.cs" t="Include" />
+              </e>
+            </e>
             <e p="AutoCalculateVelocity" t="Include">
               <e p="Launcher.cs" t="Include" />
             </e>
@@ -54,6 +62,12 @@
             </e>
             <e p="Shaders" t="Include">
               <e p="HandleCutOffShader.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Utils" t="Include">
+            <e p="DrawUtil.cs" t="Include" />
+            <e p="PhysicsCalculations" t="Include">
+              <e p="PhysicsCalcUtil.cs" t="Include" />
             </e>
           </e>
         </e>

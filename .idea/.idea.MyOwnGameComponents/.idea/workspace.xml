@@ -16,10 +16,30 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="initial commit">
+    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="delete RaycastUtil.cs">
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryMaterial.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scene/TragectoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scene/TragectoryScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryPoint.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryPoint.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/TrajectoryPoint/TrajectoryPoint.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,34 +50,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/GroundLayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/PlayerInputController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Default/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/IArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/2a/f1c51498/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/4b/c2cce962/Collision.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/e5/f40a65a2/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Test/JustUpdate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Test/TestUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/21/4b406213/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48050808-8AEE-40CA-B708-18FF164A29D5/c3/d7ba2ed7/LocalPhysicsMode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test/JustUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CameraScripts/Zoom/CameraZoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/GroundLayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test/TestUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/IArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Default/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/PlayerInputController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Scene.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -85,16 +113,30 @@
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/IArrowTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/GroundLayer.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Arrow.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/CameraZoom.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/EnemyArcherAI/Scripts/ArcherShootingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CameraScripts/Zoom/CameraZoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherShootingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtils.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/DrawPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/Draw.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/RaycastUtil.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" />
       </list>
     </option>
   </component>
@@ -158,7 +200,9 @@
       <workItem from="1589116719087" duration="19361000" />
       <workItem from="1589209110513" duration="8389000" />
       <workItem from="1589227053126" duration="397000" />
-      <workItem from="1589295891955" duration="5889000" />
+      <workItem from="1589295891955" duration="6673000" />
+      <workItem from="1589380749744" duration="20569000" />
+      <workItem from="1589470272251" duration="1481000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -167,7 +211,77 @@
       <option name="project" value="LOCAL" />
       <updated>1589138769585</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement cutoff shader at hit point;&#10;implement highlight shader at hit point;&#10;implement camera zoom along look direction;&#10;implement calculating velocity based on:&#10;- start pos&#10;- target pos&#10;- max point to reach during the fly (h - height);&#10;implement fly trajectory drawing;">
+      <created>1589311100452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589311100452</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete unused variable">
+      <created>1589386121011</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589386121011</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add new modifier to Camera variable">
+      <created>1589386149490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589386149490</updated>
+    </task>
+    <task id="LOCAL-00005" summary="separate math formula of time calculation to understandable parts">
+      <created>1589386255121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589386255121</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add util to calculate initial velocity for parabolic movement">
+      <created>1589393982339</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589393982339</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add util to calculate initial velocity for parabolic movement">
+      <created>1589394494368</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589394494368</updated>
+    </task>
+    <task id="LOCAL-00008" summary="code clean up">
+      <created>1589395266490</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589395266490</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add DrawUtil with DrawParabolicPath method">
+      <created>1589395747055</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589395747055</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add RaycastUtil.cs with MouseToHitPosition method">
+      <created>1589397063516</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589397063516</updated>
+    </task>
+    <task id="LOCAL-00011" summary="delete RaycastUtil.cs">
+      <created>1589398335331</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589398335331</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,22 +316,39 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="implement cutoff shader at hit point;&#10;implement highlight shader at hit point;&#10;implement camera zoom along look direction;&#10;implement calculating velocity based on:&#10;- start pos&#10;- target pos&#10;- max point to reach during the fly (h - height);&#10;implement fly trajectory drawing;" />
+    <MESSAGE value="delete unused variable" />
+    <MESSAGE value="add new modifier to Camera variable" />
+    <MESSAGE value="separate math formula of time calculation to understandable parts" />
+    <MESSAGE value="add util to calculate initial velocity for parabolic movement" />
+    <MESSAGE value="code clean up" />
+    <MESSAGE value="add DrawUtil with DrawParabolicPath method" />
+    <MESSAGE value="add RaycastUtil.cs with MouseToHitPosition method" />
+    <MESSAGE value="delete RaycastUtil.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete RaycastUtil.cs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1588967106259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588967106259" />
+    <state x="514" y="38" key="RollbackChangesDialog" timestamp="1589383291278">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="514" y="38" key="RollbackChangesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589383291278" />
     <state x="369" y="115" key="SettingsEditor" timestamp="1588968242464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587569648749" />
     <state x="369" y="115" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588968242464" />
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1589138897587">
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1589311114339">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589138897587" />
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589311114339" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589384753612">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589384753612" />
     <state x="-1281" y="239" width="642" height="562" key="find.popup" timestamp="1589132299213">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -226,9 +357,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587747085341" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589136426174">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1589395929234">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589136426174" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589395929234" />
   </component>
 </project>
