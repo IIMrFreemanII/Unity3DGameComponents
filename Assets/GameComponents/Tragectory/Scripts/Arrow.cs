@@ -7,7 +7,7 @@ public class Arrow : MonoBehaviour
 {
     public Rigidbody rb = null;
     public BoxCollider boxCollider = null;
-    public float damage = 0;
+    [SerializeField] private float damage = 0;
 
     [SerializeField] private float rotationSpeed = 12f;
 
@@ -26,8 +26,11 @@ public class Arrow : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
     }
 
-    public void Init(Vector3 startForce)
+    public void Init(Vector3 startForce, float damage)
     {
+        this.damage = damage;
+        
+        transform.SetParent(null);
         rb.isKinematic = false;
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         rb.AddForce(startForce, ForceMode.Impulse);

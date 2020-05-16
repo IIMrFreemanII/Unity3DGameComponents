@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Extensions;
 using UnityEngine;
 
 public class Bow : MonoBehaviour
@@ -95,11 +96,10 @@ public class Bow : MonoBehaviour
     {
         if (currentArrow != null)
         {
-            currentArrow.damage = damage * currentStretchStrength;
-            currentArrow.transform.SetParent(null);
-
+            float arrowDamage = damage * currentStretchStrength;
             Vector3 startForce = currentArrow.transform.forward * fireForce * currentStretchStrength;
-            currentArrow.Init(startForce);
+            
+            currentArrow.Init(startForce, arrowDamage);
             
             currentArrow = null;
             
@@ -139,7 +139,7 @@ public class Bow : MonoBehaviour
         Transform currentArrowTransform = currentArrow.transform;
         Vector3 currentArrowPosition = currentArrowTransform.position;
         
-        Vector3 arrowRotationCompensator = new Vector3(0, currentArrow.transform.forward.y, 0);
+        Vector3 arrowRotationCompensator = currentArrow.transform.forward.With(0f, z: 0f);
         
         Vector3 arrowVelocity = (currentArrowTransform.forward * fireForce * currentStretchStrength) - arrowRotationCompensator;
         trajectoryRenderer.ShowTrajectory(currentArrowPosition, arrowVelocity);

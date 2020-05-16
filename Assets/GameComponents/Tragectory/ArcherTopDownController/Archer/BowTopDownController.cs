@@ -9,7 +9,6 @@ namespace TopDownArcher
     [RequireComponent(typeof(ArcherTopDownController))]
     public class BowTopDownController : MonoBehaviour
     {
-        private ArcherTopDownController archerController = null;
         [SerializeField] private Vector3 targetPosition;
         [SerializeField] private Arrow currentArrow = null;
         [SerializeField] private ArrowPosition arrowPosition = null;
@@ -21,6 +20,9 @@ namespace TopDownArcher
         [SerializeField] private bool debugPath = true;
 
         [SerializeField] private float gravity = -30f;
+        [SerializeField] private float damage = 10f;
+        
+        private ArcherTopDownController archerController = null;
 
         private void Start()
         {
@@ -56,9 +58,9 @@ namespace TopDownArcher
                 Vector3 initialVelocity = PhysicsCalcUtil.CalcInitVelocity(currentArrow.transform.position,
                     targetPosition, hDisplacement, Physics.gravity.y).initialVelocity;
                 
-                Vector3 arrowRotationCompensator = currentArrow.transform.forward.With(0, z: 0);
-                
-                trajectoryRenderer.ShowTrajectory(currentArrow.transform.position, initialVelocity - arrowRotationCompensator);
+                Vector3 arrowRotationCompensator = currentArrow.transform.forward / 2;
+                initialVelocity = initialVelocity - arrowRotationCompensator;
+                trajectoryRenderer.ShowTrajectory(currentArrow.transform.position, initialVelocity);
             }
         }
 
@@ -72,18 +74,20 @@ namespace TopDownArcher
 
         private void Launch()
         {
-            currentArrow.transform.SetParent(null);
-            
-            currentArrow.rb.isKinematic = false;
-            currentArrow.rb.velocity = PhysicsCalcUtil.CalcInitVelocity(currentArrow.transform.position,
-                targetPosition, hDisplacement, Physics.gravity.y).initialVelocity;
-
-            currentArrow = null;
-            
-            StartCoroutine(SetTimeout(reloadTime, () =>
+            if (currentArrow != null)
             {
-                currentArrow = Instantiate(arrowPrefab, arrowPosition.transform.position, arrowPosition.transform.rotation, arrowPosition.transform);
-            }));
+                Vector3 startForce = PhysicsCalcUtil.CalcInitVelocity(currentArrow.transform.position,
+                    targetPosition, hDisplacement, Physics.gravity.y).initialVelocity;
+
+                currentArrow.Init(startForce, damage);
+
+                currentArrow = null;
+            
+                StartCoroutine(SetTimeout(reloadTime, () =>
+                {
+                    currentArrow = Instantiate(arrowPrefab, arrowPosition.transform.position, arrowPosition.transform.rotation, arrowPosition.transform);
+                }));
+            }
         }
 
         private void HandleBowRotation()
