@@ -98,7 +98,8 @@ public class Bow : MonoBehaviour
             currentArrow.damage = damage * currentStretchStrength;
             currentArrow.transform.SetParent(null);
 
-            currentArrow.Init(currentArrow.transform.forward * fireForce * currentStretchStrength);
+            Vector3 startForce = currentArrow.transform.forward * fireForce * currentStretchStrength;
+            currentArrow.Init(startForce);
             
             currentArrow = null;
             
