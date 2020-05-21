@@ -1,5 +1,5 @@
-﻿﻿﻿using System;
-  using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Extensions
 {
@@ -9,13 +9,16 @@ namespace Extensions
         {
             return Vector3.Normalize(destination - transform.position);
         }
-        
-        public static void HandleComponent<T>(this Transform transform, Action<T> handler)
+
+        public static bool HandleComponent<T>(this Transform transform, Action<T> handler)
         {
             if (transform.TryGetComponent(out T component))
             {
                 handler?.Invoke(component);
+                return true;
             }
+
+            return false;
         }
     }
 }

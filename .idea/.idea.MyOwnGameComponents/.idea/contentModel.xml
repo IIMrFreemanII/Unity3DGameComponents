@@ -37,6 +37,26 @@
               </e>
             </e>
           </e>
+          <e p="GrabItems" t="Include">
+            <e p="GrabItems.cs" t="Include" />
+          </e>
+          <e p="InventorySystem" t="Include">
+            <e p="Inventory" t="Include">
+              <e p="GamePlayItem.cs" t="Include" />
+              <e p="GrabPosition.cs" t="Include" />
+              <e p="InventoryController.cs" t="Include" />
+              <e p="InventoryUIController.cs" t="Include" />
+              <e p="InventoryUiSlot.cs" t="Include" />
+              <e p="ItemInfo.cs" t="Include" />
+              <e p="ItemInfoController.cs" t="Include" />
+              <e p="ScriptableObjects" t="Include">
+                <e p="InventorySO.cs" t="Include" />
+                <e p="ItemData" t="Include">
+                  <e p="ItemDataSO.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Tragectory" t="Include">
             <e p="ArcherTopDownController" t="Include">
               <e p="Archer" t="Include">
@@ -69,7 +89,11 @@
             <e p="PhysicsCalculations" t="Include">
               <e p="PhysicsCalcUtil.cs" t="Include" />
             </e>
+            <e p="TimeUtils.cs" t="Include" />
           </e>
+        </e>
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
         </e>
         <e p="LowpolyWeaponPack" t="Include">
           <e p="README.txt" t="Include" />
@@ -77,6 +101,34 @@
         <e p="Test" t="Include">
           <e p="JustUpdate.cs" t="Include" />
           <e p="TestUpdate.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
       </e>
       <e p="MyOwnGameComponents.sln" t="IncludeFlat" />
