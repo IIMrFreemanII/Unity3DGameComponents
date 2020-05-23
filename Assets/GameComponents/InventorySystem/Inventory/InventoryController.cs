@@ -1,17 +1,33 @@
-﻿using Extensions;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Extensions;
 using GameComponents.InventorySystem.Inventory;
-using GameComponents.InventorySystem.Inventory.ScriptableObjects;
+using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
+using Newtonsoft.Json;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
+using UnityEditor;
 using UnityEngine;
+using SlotData = GameComponents.InventorySystem.Inventory.SlotData;
 
-public class InventoryController : MonoBehaviour
+public class InventoryController : SerializedMonoBehaviour
 {
-    [SerializeField] private InventorySO inventorySo = null;
-    [SerializeField] private Transform inventoryContainerTrans = null;
     [SerializeField] private Camera cam = null;
     [SerializeField] private float maxDistToPickUp = 5f;
-    
-    private Transform camTrans;
+    [SerializeField] private InventoryUiContainer inventoryUiContainer = null;
 
+    [SerializeField] 
+    private InventoryUiSlot slotPrefab = null;
+    [NonSerialized, OdinSerialize]
+    public InventoryData inventoryData;
+    [SerializeField]
+    private Dictionary<SlotType, List<InventoryUiSlot>> uiSlots;
+
+    [SerializeField] private string filePath = null;
+
+    private Transform camTrans;
+    
     private void Awake()
     {
         cam = Camera.main;
@@ -20,7 +36,7 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        // InitSlots();
+        InitInvData();
     }
 
     private void Update()
@@ -28,13 +44,38 @@ public class InventoryController : MonoBehaviour
         HandlePickUpItem();
     }
 
-    private void InitSlots()
+    private void InitInvData()
     {
-        for (int i = 0; i < inventoryContainerTrans.childCount; i++)
+        InventoryData invData = LoadInventoryData(filePath);
+
+        if (invData == null)
         {
-            InventoryUiSlot uiSlot = inventoryContainerTrans.GetChild(i).GetComponent<InventoryUiSlot>();
-            inventorySo.AddSlot(i, uiSlot.Type);
+            InitUiSlots(inventoryData);
         }
+        else
+        {
+            inventoryData = invData;
+            InitUiSlots(inventoryData);
+        }
+    }
+
+    private void InitUiSlots(InventoryData invData)
+    {
+        uiSlots = new Dictionary<SlotType, List<InventoryUiSlot>>();
+        
+        foreach (KeyValuePair<SlotType,List<SlotData>> keyValuePair in invData.inventorySlotsData)
+        {
+            uiSlots.Add(keyValuePair.Key, new List<InventoryUiSlot>());
+            
+            foreach (SlotData slotData in keyValuePair.Value)
+            {
+                InventoryUiSlot uiSlot = Instantiate(slotPrefab, inventoryUiContainer.transform);
+                uiSlot.SlotData = slotData;
+                uiSlots[keyValuePair.Key].Add(uiSlot);
+            }
+        }
+        
+        UpdateUiSlots();
     }
 
     private void HandlePickUpItem()
@@ -43,16 +84,85 @@ public class InventoryController : MonoBehaviour
         {
             Vector3 camPos = camTrans.position;
             Vector3 camDir = camTrans.forward;
-
+    
             if (Physics.Raycast(camPos, camDir, out RaycastHit hit, maxDistToPickUp))
             {
-                hit.transform.HandleComponent<GamePlayItem>(item =>
+                hit.transform.HandleComponent<Item>(item =>
                 {
-                    inventorySo.AddItem(item.ItemDataSo, SlotType.Common);
+                    AddItem(item, SlotType.Common);
                     Destroy(item.gameObject);
                 });
             }
         }
     }
-    
+
+    private SlotData GetEmptySlot(SlotType slotType)
+    {
+        foreach (SlotData slotData in inventoryData.inventorySlotsData[slotType])
+        {
+            if (slotData.itemDataSoId == 0)
+            {
+                return slotData;
+            }
+        }
+
+        Debug.Log("No free slots");
+        return null;
+    }
+
+    private void AddItem(Item item, SlotType slotType)
+    {
+        SlotData slotData = GetEmptySlot(slotType);
+        slotData.itemsAmount++;
+        slotData.itemDataSo = item.ItemDataSo;
+        slotData.itemDataSoId = item.ItemDataSo.GetInstanceID();
+        
+        SaveInventoryData(filePath);
+        
+        UpdateUiSlots();
+        print($"add {item.ItemDataSo.ItemName}");
+    }
+
+    private void SaveInventoryData(string filePath)
+    {
+        string json = JsonConvert.SerializeObject(inventoryData, Formatting.Indented);
+        File.WriteAllText(filePath, json);
+        Debug.Log("Save success");
+    }
+
+    private InventoryData LoadInventoryData(string filePath)
+    {
+        if (!File.Exists(filePath))
+        {
+            Debug.Log($"Can't load file: {filePath}");
+            return null;
+        }
+        
+        string json = File.ReadAllText(filePath);
+        InventoryData invData = JsonConvert.DeserializeObject<InventoryData>(json);
+
+        foreach (KeyValuePair<SlotType,List<SlotData>> keyValuePair in invData.inventorySlotsData)
+        {
+            foreach (SlotData slotData in keyValuePair.Value)
+            {
+                string assetPath = AssetDatabase.GetAssetPath(slotData.itemDataSoId);
+                slotData.itemDataSo = AssetDatabase.LoadAssetAtPath<ItemDataSO>(assetPath);
+            }
+        }
+
+        Debug.Log($"Load file {filePath} success");
+        
+        return invData;
+    }
+
+    private void UpdateUiSlots()
+    {
+        foreach (KeyValuePair<SlotType,List<InventoryUiSlot>> keyValuePair in uiSlots)
+        {
+            foreach (InventoryUiSlot inventoryUiSlot in keyValuePair.Value)
+            {
+                inventoryUiSlot.UpdateUiSlot();
+            }
+        }
+    }
 }

@@ -15,7 +15,7 @@ public class ItemInfoController : MonoBehaviour
 
     [SerializeField] private Vector3 itemInfoPosOffset = new Vector3(20f, 20f);
 
-    private GamePlayItem currentHoveredPlayItem;
+    private Item currentHoveredPlayItem;
     
     [SerializeField] private float rayCastsPerSecond = 1f;
     
@@ -45,7 +45,7 @@ public class ItemInfoController : MonoBehaviour
         
         if (Physics.Raycast(camPos, camLookDir, out RaycastHit hit, maxRaycastDist))
         {
-            bool hasTargetComponent = hit.transform.HandleComponent<GamePlayItem>(gameItem =>
+            bool hasTargetComponent = hit.transform.HandleComponent<Item>(gameItem =>
             {
                 if (currentHoveredPlayItem != gameItem)
                 {
