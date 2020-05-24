@@ -16,3 +16,5 @@ MonoBehaviour:
   itemName: Stamina Potion
   playItemPrefab: {fileID: 7217625583052552002, guid: bb652a9e4113adb43b2a345943a590dc,
     type: 3}
+  assetReference:
+    m_AssetGUID: d79db3b991c48db448b57d523b159199

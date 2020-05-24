@@ -1,6 +1,7 @@
 ﻿using System;
 using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
 using Sirenix.OdinInspector;
+using UnityEngine.AddressableAssets;
 
 namespace GameComponents.InventorySystem.Inventory
 {
@@ -15,8 +16,10 @@ namespace GameComponents.InventorySystem.Inventory
     {
         [ShowInInspector, NonSerialized]
         public ItemDataSO itemDataSo;
-        // itemId represents ItemDataSO id which allows to find this asset using AssetDatabase.GetAssetPath(assetId).
-        public int itemDataSoId;
+        [ShowInInspector, NonSerialized]
+        public AssetReference itemDataSoRef;
+        // Addressable asset GUID to find asset after loading json
+        public string itemDataSoAssetGUID;
         public int itemsAmount;
     }
 }

@@ -16,3 +16,5 @@ MonoBehaviour:
   itemName: Mana Potion
   playItemPrefab: {fileID: 117932703216675901, guid: bac16ee5ac5b79f4b8381e53c646f8eb,
     type: 3}
+  assetReference:
+    m_AssetGUID: 77ea63c2e766cb548814b1682759dd5c

@@ -9,6 +9,7 @@ namespace GameComponents.OdinLearning.Training
     {
         public ItemDataSO itemData;
 
+#if UNITY_EDITOR
         [ContextMenu("Show item path")]
         private void ShotAssetPath()
         {
@@ -17,5 +18,6 @@ namespace GameComponents.OdinLearning.Training
             print(path);
             print(AssetDatabase.LoadAssetAtPath<ItemDataSO>(path));
         }
+#endif
     }
 }

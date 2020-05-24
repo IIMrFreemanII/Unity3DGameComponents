@@ -51,7 +51,6 @@
               <e p="Item.cs" t="Include" />
               <e p="ItemInfo.cs" t="Include" />
               <e p="ItemInfoController.cs" t="Include" />
-              <e p="Json" t="Include" />
               <e p="ScriptableObjects" t="Include">
                 <e p="InventoryDataSO" t="Include">
                   <e p="InventorySO.cs" t="Include" />
@@ -66,6 +65,7 @@
           <e p="OdinLearning" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="Training" t="Include">
+              <e p="AddressableTest.cs" t="Include" />
               <e p="ExampleScript.cs" t="Include" />
             </e>
           </e>
@@ -103,9 +103,6 @@
             </e>
             <e p="TimeUtils.cs" t="Include" />
           </e>
-        </e>
-        <e p="JsonDotNet" t="Include">
-          <e p="link.xml" t="Include" />
         </e>
         <e p="LowpolyWeaponPack" t="Include">
           <e p="README.txt" t="Include" />

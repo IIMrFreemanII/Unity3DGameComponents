@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 
 namespace GameComponents.InventorySystem.Inventory
@@ -24,32 +26,56 @@ namespace GameComponents.InventorySystem.Inventory
             set => slotData = value;
         }
 
+        private void ActivateSlot(SlotData slotData)
+        {
+            Sprite sprite = slotData.itemDataSo.Icon;
+            
+            if (image.sprite != sprite)
+            {
+                image.sprite = sprite;
+            }
+            if (!uiItemGO.activeInHierarchy)
+            {
+                uiItemGO.SetActive(true);
+            }
+        }
+
+        private void DeactivateSlot()
+        {
+            if (image.sprite)
+            {
+                image.sprite = null;
+            }
+            
+            if (uiItemGO.activeInHierarchy)
+            {
+                uiItemGO.SetActive(false);
+            }
+        }
+
         public void UpdateUiSlot()
         {
-            if (slotData.itemDataSo != null)
+            if (slotData.itemDataSoRef != null)
             {
-                Sprite sprite = slotData.itemDataSo.Icon;
+                if (slotData.itemDataSo == null)
+                {
+                    AssetReference assetReference = slotData.itemDataSoRef;
+                    
+                    Addressables.LoadAssetAsync<ItemDataSO>(assetReference).Completed += handle =>
+                    {
+                        slotData.itemDataSo = handle.Result;
 
-                if (image.sprite != sprite)
-                {
-                    image.sprite = sprite;
+                        ActivateSlot(slotData);
+                    };
                 }
-                if (!uiItemGO.activeInHierarchy)
+                else
                 {
-                    uiItemGO.SetActive(true);
+                    ActivateSlot(slotData);
                 }
             }
             else
             {
-                if (image.sprite)
-                {
-                    image.sprite = null;
-                }
-
-                if (uiItemGO.activeInHierarchy)
-                {
-                    uiItemGO.SetActive(false);
-                }
+                DeactivateSlot();
             }
         }
     }

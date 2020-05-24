@@ -27,8 +27,26 @@ public class GrabItems : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void HandleExit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
+    private void HandleCursor()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        }
+    }
+
     private void Update()
     {
+        HandleExit();
+        HandleCursor();
         HandleGrab();   
     }
 

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ce0127b12022cca498b32737b7f0b052
+  m_SerializeEntries:
+  - m_GUID: 29045b4df8ee4f24896852fe3dda5763
+    m_Address: ItemsSO/Potions/HealthPotion
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 77ea63c2e766cb548814b1682759dd5c
+    m_Address: ItemsSO/Potions/ManaPotion
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d79db3b991c48db448b57d523b159199
+    m_Address: ItemsSO/Potions/StaminaPotion
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6c4aa8b8602bea14cab90bd172f0f6ee, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fa20deac116726b4b824c840d36018e9, type: 2}
+    - {fileID: 11400000, guid: 3d9ab910a2bf6e14dafba11e68c18bd6, type: 2}

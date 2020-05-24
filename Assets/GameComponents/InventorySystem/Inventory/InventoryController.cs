@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using Extensions;
 using GameComponents.InventorySystem.Inventory;
-using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using SlotData = GameComponents.InventorySystem.Inventory.SlotData;
 
 public class InventoryController : SerializedMonoBehaviour
@@ -24,12 +23,14 @@ public class InventoryController : SerializedMonoBehaviour
     [SerializeField]
     private Dictionary<SlotType, List<InventoryUiSlot>> uiSlots;
 
-    [SerializeField] private string filePath = null;
+    private string fileName = "inventoryData.json";
+    private string filePath;
 
     private Transform camTrans;
     
     private void Awake()
     {
+        filePath = $"{Application.persistentDataPath}/{fileName}";
         cam = Camera.main;
         camTrans = cam.transform;
     }
@@ -100,13 +101,13 @@ public class InventoryController : SerializedMonoBehaviour
     {
         foreach (SlotData slotData in inventoryData.inventorySlotsData[slotType])
         {
-            if (slotData.itemDataSoId == 0)
+            if (slotData.itemDataSo == null)
             {
                 return slotData;
             }
         }
 
-        Debug.Log("No free slots");
+        Debug.LogError("No free slots");
         return null;
     }
 
@@ -115,8 +116,17 @@ public class InventoryController : SerializedMonoBehaviour
         SlotData slotData = GetEmptySlot(slotType);
         slotData.itemsAmount++;
         slotData.itemDataSo = item.ItemDataSo;
-        slotData.itemDataSoId = item.ItemDataSo.GetInstanceID();
-        
+
+        if (item.ItemDataSo.AssetReference != null)
+        {
+            slotData.itemDataSoRef = item.ItemDataSo.AssetReference;
+            slotData.itemDataSoAssetGUID = item.ItemDataSo.AssetReference.RuntimeKey.ToString();
+        }
+        else
+        {
+            Debug.LogError("No asset reference");
+        }
+
         SaveInventoryData(filePath);
         
         UpdateUiSlots();
@@ -145,8 +155,10 @@ public class InventoryController : SerializedMonoBehaviour
         {
             foreach (SlotData slotData in keyValuePair.Value)
             {
-                string assetPath = AssetDatabase.GetAssetPath(slotData.itemDataSoId);
-                slotData.itemDataSo = AssetDatabase.LoadAssetAtPath<ItemDataSO>(assetPath);
+                if (slotData.itemDataSoAssetGUID != null)
+                {
+                    slotData.itemDataSoRef = new AssetReference(slotData.itemDataSoAssetGUID);
+                }
             }
         }
 
