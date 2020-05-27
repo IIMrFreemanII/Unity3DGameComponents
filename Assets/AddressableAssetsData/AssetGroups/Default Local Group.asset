@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: ItemsSO/Potions/StaminaPotion
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ef317c2abf6ba284393089c5e964664b
+    m_Address: ItemsSo/Weapons/Sword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c4aa8b8602bea14cab90bd172f0f6ee, type: 2}
   m_SchemaSet:

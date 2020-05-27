@@ -1,5 +1,5 @@
 ﻿using System;
-using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
+using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemDataSO;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

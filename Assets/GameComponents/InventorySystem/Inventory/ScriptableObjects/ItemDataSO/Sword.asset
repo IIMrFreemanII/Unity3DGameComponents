@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ce5894cc5cdeb8428900d6d57aa164d, type: 3}
-  m_Name: HealthPotion
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1596ce10979230c4eba5169c4c90f895, type: 3}
-  itemName: Health Potion
-  playItemPrefab: {fileID: 2132066982767294002, guid: 39d4308163857dd43b5588048b610792,
+  icon: {fileID: 21300000, guid: 3d5de3033771a224ba4f9b2409012617, type: 3}
+  itemName: Sword
+  playItemPrefab: {fileID: 6385889337312099844, guid: c3469ac6fa203584e9e44e545d1e1c71,
     type: 3}
   assetReference:
-    m_AssetGUID: 29045b4df8ee4f24896852fe3dda5763
-  isStackable: 1
-  maxAmount: 60
+    m_AssetGUID: ef317c2abf6ba284393089c5e964664b
+  isStackable: 0
+  maxAmount: 1

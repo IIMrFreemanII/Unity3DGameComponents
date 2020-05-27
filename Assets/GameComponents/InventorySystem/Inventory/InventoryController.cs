@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using Extensions;
 using GameComponents.InventorySystem.Inventory;
-using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using SlotData = GameComponents.InventorySystem.Inventory.SlotData;
 
 public class InventoryController : SerializedMonoBehaviour
@@ -16,7 +13,7 @@ public class InventoryController : SerializedMonoBehaviour
     [SerializeField] private float maxDistToPickUp = 5f;
     [SerializeField] private InventoryUiContainer inventoryUiContainer = null;
 
-    [SerializeField] 
+    [OdinSerialize]
     private InventoryUiSlot slotPrefab = null;
     [NonSerialized, OdinSerialize]
     public InventoryData inventoryData;
@@ -47,10 +44,11 @@ public class InventoryController : SerializedMonoBehaviour
 
     private void InitInvData()
     {
-        InventoryData invData = LoadInventoryData(filePath);
+        InventoryData invData = inventoryData.LoadInventoryData(filePath);
 
         if (invData == null)
         {
+            Debug.Log("No saved data, initializing default data");
             InitUiSlots(inventoryData);
         }
         else
@@ -91,80 +89,18 @@ public class InventoryController : SerializedMonoBehaviour
                 hit.transform.HandleComponent<Item>(item =>
                 {
                     AddItem(item, SlotType.Common);
-                    Destroy(item.gameObject);
                 });
             }
         }
     }
 
-    private SlotData GetEmptySlot(SlotType slotType)
-    {
-        foreach (SlotData slotData in inventoryData.inventorySlotsData[slotType])
-        {
-            if (slotData.itemDataSo == null)
-            {
-                return slotData;
-            }
-        }
-
-        Debug.LogError("No free slots");
-        return null;
-    }
-
     private void AddItem(Item item, SlotType slotType)
     {
-        SlotData slotData = GetEmptySlot(slotType);
-        slotData.itemsAmount++;
-        slotData.itemDataSo = item.ItemDataSo;
+        inventoryData.AddItem(item, slotType);
 
-        if (item.ItemDataSo.AssetReference != null)
-        {
-            slotData.itemDataSoRef = item.ItemDataSo.AssetReference;
-            slotData.itemDataSoAssetGUID = item.ItemDataSo.AssetReference.RuntimeKey.ToString();
-        }
-        else
-        {
-            Debug.LogError("No asset reference");
-        }
-
-        SaveInventoryData(filePath);
-        
         UpdateUiSlots();
+        inventoryData.SaveInventoryData(filePath);
         print($"add {item.ItemDataSo.ItemName}");
-    }
-
-    private void SaveInventoryData(string filePath)
-    {
-        string json = JsonConvert.SerializeObject(inventoryData, Formatting.Indented);
-        File.WriteAllText(filePath, json);
-        Debug.Log("Save success");
-    }
-
-    private InventoryData LoadInventoryData(string filePath)
-    {
-        if (!File.Exists(filePath))
-        {
-            Debug.Log($"Can't load file: {filePath}");
-            return null;
-        }
-        
-        string json = File.ReadAllText(filePath);
-        InventoryData invData = JsonConvert.DeserializeObject<InventoryData>(json);
-
-        foreach (KeyValuePair<SlotType,List<SlotData>> keyValuePair in invData.inventorySlotsData)
-        {
-            foreach (SlotData slotData in keyValuePair.Value)
-            {
-                if (slotData.itemDataSoAssetGUID != null)
-                {
-                    slotData.itemDataSoRef = new AssetReference(slotData.itemDataSoAssetGUID);
-                }
-            }
-        }
-
-        Debug.Log($"Load file {filePath} success");
-        
-        return invData;
     }
 
     private void UpdateUiSlots()

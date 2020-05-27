@@ -1,4 +1,4 @@
-﻿using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemData;
+﻿using GameComponents.InventorySystem.Inventory.ScriptableObjects.ItemDataSO;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;

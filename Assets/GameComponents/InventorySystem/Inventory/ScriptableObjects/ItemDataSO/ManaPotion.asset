@@ -18,3 +18,5 @@ MonoBehaviour:
     type: 3}
   assetReference:
     m_AssetGUID: 77ea63c2e766cb548814b1682759dd5c
+  isStackable: 1
+  maxAmount: 60

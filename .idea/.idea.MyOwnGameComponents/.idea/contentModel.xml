@@ -132,6 +132,7 @@
         </e>
         <e p="Test" t="Include">
           <e p="JustUpdate.cs" t="Include" />
+          <e p="TestCache.cs" t="Include" />
           <e p="TestUpdate.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
