@@ -1,0 +1,7 @@
+﻿<UXML xmlns="UnityEngine.UIElements">
+    <VisualElement class="row">
+        <VisualElement class="sphere-preview"/>
+        <Label text="Sphere"/>
+        <Button text="Sphere Button" name="Sphere" class="sphere-btn"/>
+    </VisualElement>
+</UXML>

@@ -1,0 +1,11 @@
+﻿.sphere-btn {
+    width: 90px;
+    height: 90px;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.sphere-preview {
+    width: 90px;
+    height: 90px;
+}
