@@ -16,15 +16,28 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement inventory">
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/SphereBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/SphereBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uxml" afterDir="false" />
+    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement custom editor with UIElements">
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scene/TragectoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scene/TragectoryScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionShader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionShader.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/aa.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +49,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/ExampleScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/DoCreateShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Editor/ShaderGUI/Shaders/ParticlesUnlitShader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer.meta" root0="FORCE_HIGHLIGHTING" />
@@ -51,18 +65,24 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Default/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TestCache.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/AddressableTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitPosition.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/21/4b406213/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HandleHit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E98ED036-8295-432E-8C11-E52D6243EE11/63/e31767de/TextureFormat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/ItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/Sword.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity.meta" root0="FORCE_HIGHLIGHTING" />
@@ -78,13 +98,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/IArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/GrabItems/GrabItems.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StreamingAssets/aa.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D966F060-1D26-456D-9165-2D8D979D3635/30/d6af4604/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -94,7 +115,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.1.10/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/PlayerInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Scene.meta" root0="FORCE_HIGHLIGHTING" />
@@ -105,19 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Arrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/UI_Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/GrabPosition.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfoController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUi.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventorySlot.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjs/InventoryData.cs" />
@@ -156,6 +164,19 @@
         <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uxml" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/Editor/VectorsArray.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/LUT/ShaderDynamicArray.shader" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/LUT/ShaderDynamicArray.cs" />
+        <option value="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/DoCreateShader.cs" />
+        <option value="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Path.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/PathCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HandleHit.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" />
       </list>
     </option>
   </component>
@@ -241,7 +262,14 @@
       <workItem from="1590509238101" duration="13423000" />
       <workItem from="1590590654093" duration="9509000" />
       <workItem from="1590680288187" duration="2421000" />
-      <workItem from="1590682741924" duration="5960000" />
+      <workItem from="1590682741924" duration="8077000" />
+      <workItem from="1590765696744" duration="12719000" />
+      <workItem from="1590853568379" duration="1000" />
+      <workItem from="1590858065758" duration="6305000" />
+      <workItem from="1590909062321" duration="16517000" />
+      <workItem from="1591023226333" duration="969000" />
+      <workItem from="1591118750941" duration="7993000" />
+      <workItem from="1591197960948" duration="1787000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -383,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590604300253</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="implement custom editor with UIElements">
+      <created>1590693491979</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590693491979</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +470,8 @@
     <MESSAGE value="add odin file to .gitignore" />
     <MESSAGE value="implement saving inventory data in Application.persistentDataPath" />
     <MESSAGE value="implement inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement inventory" />
+    <MESSAGE value="implement custom editor with UIElements" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement custom editor with UIElements" />
   </component>
   <component name="WindowStateProjectService">
     <state width="416" height="618" key="DebuggerActiveHint" timestamp="1590599896890">

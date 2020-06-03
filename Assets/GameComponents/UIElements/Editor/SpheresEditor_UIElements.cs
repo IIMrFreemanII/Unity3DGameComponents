@@ -34,17 +34,20 @@ namespace GameComponents.UIElements.Editor
 
             _visualTree.CloneTree(_rootElement);
 
-            UQueryBuilder<VisualElement> builder = _rootElement.Query(classes: new string[] {"sphere-btn"});
-            builder.ForEach(AddButtonIcon);
+            UQueryBuilder<VisualElement> builder = _rootElement.Query(classes: new [] {"sphere-preview"});
+            UQueryBuilder<VisualElement> buttons = _rootElement.Query(classes: new[] {"sphere-btn"});
+            
+            builder.ForEach(AddSphereIcon);
+            buttons.ForEach(OnBtnClick);
 
             return _rootElement;
         }
 
-        public void AddButtonIcon(VisualElement button)
+        private void AddSphereIcon(VisualElement iconContainer)
         {
             IMGUIContainer icon = new IMGUIContainer(() =>
             {
-                string path = $"Assets/GameComponents/UIElements/{button.name}.prefab";
+                string path = "Assets/GameComponents/UIElements/Sphere.prefab";
 
                 GameObject asset = AssetDatabase.LoadAssetAtPath<GameObject>(path);
 
@@ -52,12 +55,15 @@ namespace GameComponents.UIElements.Editor
                 editor.OnPreviewGUI(GUILayoutUtility.GetRect(90, 90), null);
             });
             
-            button.hierarchy.Add(icon);
-            
-            // button.RegisterCallback<MouseDownEvent>(e =>
-            // {
-            //     Debug.Log("Click");
-            // });
+            iconContainer.hierarchy.Add(icon);
+        }
+
+        private void OnBtnClick(VisualElement button)
+        {
+            button.RegisterCallback<MouseDownEvent>(e =>
+            {
+                // Debug.Log("Click");
+            });
         }
         
         private UnityEditor.Editor GetPreviewEditor(GameObject asset)
