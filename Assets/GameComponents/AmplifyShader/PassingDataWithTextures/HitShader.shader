@@ -1,13 +1,15 @@
 // Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "MyShaders/HitPosition"
+Shader "HitShader"
 {
 	Properties
 	{
 		[HideInInspector] _AlphaCutoff("Alpha Cutoff ", Range(0, 1)) = 0.5
 		[HideInInspector] _EmissionColor("Emission Color", Color) = (1,1,1,1)
-		_HitColor("HitColor", Color) = (1,0,0,0)
-		_ArrayLength("ArrayLength", Int) = 0
+		_Color("Color", Color) = (0.4245283,0.3264062,0.3264062,0)
+		_HitPositions("_HitPositions", 2D) = "white" {}
+		_TextureWidth("TextureWidth", Float) = 0
+		_InitRadii("InitRadii", 2D) = "white" {}
 		_IncreaseMultiplier("IncreaseMultiplier", Float) = 0
 
 		[HideInInspector]_TransmissionShadow( "Transmission Shadow", Range( 0, 1 ) ) = 0.5
@@ -217,8 +219,8 @@ Shader "MyShaders/HitPosition"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _HitColor;
-			int _ArrayLength;
+			float4 _Color;
+			float _TextureWidth;
 			float _IncreaseMultiplier;
 			#ifdef _TRANSMISSION_ASE
 				float _TransmissionShadow;
@@ -240,31 +242,30 @@ Shader "MyShaders/HitPosition"
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
-			float4 hitPositions[50];
-			float initialHitSize[50];
+			sampler2D _HitPositions;
+			sampler2D _InitRadii;
 
 
-			float CycleThoughArray36( float3 justConnect , float3 LocalPos , int ArrayLength , float IncreaseMultiplier , float justConnect1 )
+			float3 MyCustomExpression32( float3 LocalPos , sampler2D HitPositionsTexture , int justConnect , sampler2D InitPositionsTexture , float IncreaseMultiplier )
 			{
-				float result = 0;
-				for(int i = 0; i < hitPositions.Length; i++)
-				{
-					if (i > ArrayLength) {
-					return result;
-					}
-					float3 hitPos = hitPositions[i].xyz;
-					float radius = hitPositions[i].w;
+				 float result = 0;
+				for (int i = 0; i < _TextureWidth; i++) {
+					float xPosToRead = (1 / _TextureWidth) * i;
+					float2 posToRead = float2(xPosToRead, 0);
+					float4 hitData = tex2D(HitPositionsTexture, posToRead);
+					float4 initRadiusData = tex2D(InitPositionsTexture, posToRead);
+					float initRadius = initRadiusData.w;
+					float3 hitPos = hitData.xyz;
 					float dist = distance(hitPos, LocalPos);
+					float radius = hitData.w;
 					if (dist <= radius) {
-					float initialSize = initialHitSize[i];
-					float maxSize = initialSize * IncreaseMultiplier;
+					float maxSize = initRadius * IncreaseMultiplier;
 					float currentAlpha = (radius * 100) / maxSize / 100;
-					
 					float alphaValue = 1 - currentAlpha;
 					alphaValue = lerp(alphaValue, 0, currentAlpha);
 					result += alphaValue;
 					}
-				} 
+				}
 				return result;
 			}
 			
@@ -439,14 +440,14 @@ Shader "MyShaders/HitPosition"
 					WorldViewDirection = SafeNormalize( WorldViewDirection );
 				#endif
 
-				float3 justConnect36 = hitPositions[clamp(0,0,(50 - 1))].xyz;
-				float3 LocalPos36 = IN.ase_texcoord7.xyz;
-				int ArrayLength36 = _ArrayLength;
-				float IncreaseMultiplier36 = _IncreaseMultiplier;
-				float justConnect136 = initialHitSize[clamp(0,0,(50 - 1))];
-				float localCycleThoughArray36 = CycleThoughArray36( justConnect36 , LocalPos36 , ArrayLength36 , IncreaseMultiplier36 , justConnect136 );
+				float3 LocalPos32 = IN.ase_texcoord7.xyz;
+				sampler2D HitPositionsTexture32 = _HitPositions;
+				int justConnect32 = (int)_TextureWidth;
+				sampler2D InitPositionsTexture32 = _InitRadii;
+				float IncreaseMultiplier32 = _IncreaseMultiplier;
+				float3 localMyCustomExpression32 = MyCustomExpression32( LocalPos32 , HitPositionsTexture32 , justConnect32 , InitPositionsTexture32 , IncreaseMultiplier32 );
 				
-				float3 Albedo = ( _HitColor * localCycleThoughArray36 ).rgb;
+				float3 Albedo = ( _Color * float4( localMyCustomExpression32 , 0.0 ) ).rgb;
 				float3 Normal = float3(0, 0, 1);
 				float3 Emission = 0;
 				float3 Specular = 0.5;
@@ -637,8 +638,8 @@ Shader "MyShaders/HitPosition"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _HitColor;
-			int _ArrayLength;
+			float4 _Color;
+			float _TextureWidth;
 			float _IncreaseMultiplier;
 			#ifdef _TRANSMISSION_ASE
 				float _TransmissionShadow;
@@ -879,8 +880,8 @@ Shader "MyShaders/HitPosition"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _HitColor;
-			int _ArrayLength;
+			float4 _Color;
+			float _TextureWidth;
 			float _IncreaseMultiplier;
 			#ifdef _TRANSMISSION_ASE
 				float _TransmissionShadow;
@@ -1114,8 +1115,8 @@ Shader "MyShaders/HitPosition"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _HitColor;
-			int _ArrayLength;
+			float4 _Color;
+			float _TextureWidth;
 			float _IncreaseMultiplier;
 			#ifdef _TRANSMISSION_ASE
 				float _TransmissionShadow;
@@ -1137,31 +1138,30 @@ Shader "MyShaders/HitPosition"
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
-			float4 hitPositions[50];
-			float initialHitSize[50];
+			sampler2D _HitPositions;
+			sampler2D _InitRadii;
 
 
-			float CycleThoughArray36( float3 justConnect , float3 LocalPos , int ArrayLength , float IncreaseMultiplier , float justConnect1 )
+			float3 MyCustomExpression32( float3 LocalPos , sampler2D HitPositionsTexture , int justConnect , sampler2D InitPositionsTexture , float IncreaseMultiplier )
 			{
-				float result = 0;
-				for(int i = 0; i < hitPositions.Length; i++)
-				{
-					if (i > ArrayLength) {
-					return result;
-					}
-					float3 hitPos = hitPositions[i].xyz;
-					float radius = hitPositions[i].w;
+				 float result = 0;
+				for (int i = 0; i < _TextureWidth; i++) {
+					float xPosToRead = (1 / _TextureWidth) * i;
+					float2 posToRead = float2(xPosToRead, 0);
+					float4 hitData = tex2D(HitPositionsTexture, posToRead);
+					float4 initRadiusData = tex2D(InitPositionsTexture, posToRead);
+					float initRadius = initRadiusData.w;
+					float3 hitPos = hitData.xyz;
 					float dist = distance(hitPos, LocalPos);
+					float radius = hitData.w;
 					if (dist <= radius) {
-					float initialSize = initialHitSize[i];
-					float maxSize = initialSize * IncreaseMultiplier;
+					float maxSize = initRadius * IncreaseMultiplier;
 					float currentAlpha = (radius * 100) / maxSize / 100;
-					
 					float alphaValue = 1 - currentAlpha;
 					alphaValue = lerp(alphaValue, 0, currentAlpha);
 					result += alphaValue;
 					}
-				} 
+				}
 				return result;
 			}
 			
@@ -1307,15 +1307,15 @@ Shader "MyShaders/HitPosition"
 					#endif
 				#endif
 
-				float3 justConnect36 = hitPositions[clamp(0,0,(50 - 1))].xyz;
-				float3 LocalPos36 = IN.ase_texcoord2.xyz;
-				int ArrayLength36 = _ArrayLength;
-				float IncreaseMultiplier36 = _IncreaseMultiplier;
-				float justConnect136 = initialHitSize[clamp(0,0,(50 - 1))];
-				float localCycleThoughArray36 = CycleThoughArray36( justConnect36 , LocalPos36 , ArrayLength36 , IncreaseMultiplier36 , justConnect136 );
+				float3 LocalPos32 = IN.ase_texcoord2.xyz;
+				sampler2D HitPositionsTexture32 = _HitPositions;
+				int justConnect32 = (int)_TextureWidth;
+				sampler2D InitPositionsTexture32 = _InitRadii;
+				float IncreaseMultiplier32 = _IncreaseMultiplier;
+				float3 localMyCustomExpression32 = MyCustomExpression32( LocalPos32 , HitPositionsTexture32 , justConnect32 , InitPositionsTexture32 , IncreaseMultiplier32 );
 				
 				
-				float3 Albedo = ( _HitColor * localCycleThoughArray36 ).rgb;
+				float3 Albedo = ( _Color * float4( localMyCustomExpression32 , 0.0 ) ).rgb;
 				float3 Emission = 0;
 				float Alpha = 1;
 				float AlphaClipThreshold = 0.5;
@@ -1395,8 +1395,8 @@ Shader "MyShaders/HitPosition"
 			};
 
 			CBUFFER_START(UnityPerMaterial)
-			float4 _HitColor;
-			int _ArrayLength;
+			float4 _Color;
+			float _TextureWidth;
 			float _IncreaseMultiplier;
 			#ifdef _TRANSMISSION_ASE
 				float _TransmissionShadow;
@@ -1418,31 +1418,30 @@ Shader "MyShaders/HitPosition"
 				float _TessMaxDisp;
 			#endif
 			CBUFFER_END
-			float4 hitPositions[50];
-			float initialHitSize[50];
+			sampler2D _HitPositions;
+			sampler2D _InitRadii;
 
 
-			float CycleThoughArray36( float3 justConnect , float3 LocalPos , int ArrayLength , float IncreaseMultiplier , float justConnect1 )
+			float3 MyCustomExpression32( float3 LocalPos , sampler2D HitPositionsTexture , int justConnect , sampler2D InitPositionsTexture , float IncreaseMultiplier )
 			{
-				float result = 0;
-				for(int i = 0; i < hitPositions.Length; i++)
-				{
-					if (i > ArrayLength) {
-					return result;
-					}
-					float3 hitPos = hitPositions[i].xyz;
-					float radius = hitPositions[i].w;
+				 float result = 0;
+				for (int i = 0; i < _TextureWidth; i++) {
+					float xPosToRead = (1 / _TextureWidth) * i;
+					float2 posToRead = float2(xPosToRead, 0);
+					float4 hitData = tex2D(HitPositionsTexture, posToRead);
+					float4 initRadiusData = tex2D(InitPositionsTexture, posToRead);
+					float initRadius = initRadiusData.w;
+					float3 hitPos = hitData.xyz;
 					float dist = distance(hitPos, LocalPos);
+					float radius = hitData.w;
 					if (dist <= radius) {
-					float initialSize = initialHitSize[i];
-					float maxSize = initialSize * IncreaseMultiplier;
+					float maxSize = initRadius * IncreaseMultiplier;
 					float currentAlpha = (radius * 100) / maxSize / 100;
-					
 					float alphaValue = 1 - currentAlpha;
 					alphaValue = lerp(alphaValue, 0, currentAlpha);
 					result += alphaValue;
 					}
-				} 
+				}
 				return result;
 			}
 			
@@ -1585,15 +1584,15 @@ Shader "MyShaders/HitPosition"
 					#endif
 				#endif
 
-				float3 justConnect36 = hitPositions[clamp(0,0,(50 - 1))].xyz;
-				float3 LocalPos36 = IN.ase_texcoord2.xyz;
-				int ArrayLength36 = _ArrayLength;
-				float IncreaseMultiplier36 = _IncreaseMultiplier;
-				float justConnect136 = initialHitSize[clamp(0,0,(50 - 1))];
-				float localCycleThoughArray36 = CycleThoughArray36( justConnect36 , LocalPos36 , ArrayLength36 , IncreaseMultiplier36 , justConnect136 );
+				float3 LocalPos32 = IN.ase_texcoord2.xyz;
+				sampler2D HitPositionsTexture32 = _HitPositions;
+				int justConnect32 = (int)_TextureWidth;
+				sampler2D InitPositionsTexture32 = _InitRadii;
+				float IncreaseMultiplier32 = _IncreaseMultiplier;
+				float3 localMyCustomExpression32 = MyCustomExpression32( LocalPos32 , HitPositionsTexture32 , justConnect32 , InitPositionsTexture32 , IncreaseMultiplier32 );
 				
 				
-				float3 Albedo = ( _HitColor * localCycleThoughArray36 ).rgb;
+				float3 Albedo = ( _Color * float4( localMyCustomExpression32 , 0.0 ) ).rgb;
 				float Alpha = 1;
 				float AlphaClipThreshold = 0.5;
 
@@ -1616,29 +1615,28 @@ Shader "MyShaders/HitPosition"
 }
 /*ASEBEGIN
 Version=18100
--1920;73;805;655;2674.422;555.5918;1.931715;True;False
-Node;AmplifyShaderEditor.CommentaryNode;34;-1548.504,-145.8089;Inherit;False;666.7342;672.6279;Find hit position area;6;36;52;35;45;44;53;Hit Position;1,1,1,1;0;0
-Node;AmplifyShaderEditor.GlobalArrayNode;35;-1520.704,-96.59521;Inherit;False;hitPositions;0;50;2;True;False;0;1;False;Object;-1;4;0;INT;0;False;2;INT;0;False;1;INT;0;False;3;INT;0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.RangedFloatNode;52;-1500.996,297.2777;Inherit;False;Property;_IncreaseMultiplier;IncreaseMultiplier;2;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.IntNode;44;-1497.342,187.7633;Inherit;False;Property;_ArrayLength;ArrayLength;1;0;Create;True;0;0;False;0;False;0;1;0;1;INT;0
-Node;AmplifyShaderEditor.GlobalArrayNode;53;-1508.997,386.8775;Inherit;False;initialHitSize;0;50;0;True;False;0;1;False;Object;-1;4;0;INT;0;False;2;INT;0;False;1;INT;0;False;3;INT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.PosVertexDataNode;45;-1507.791,26.30515;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.ColorNode;31;-831.3007,-180.1672;Inherit;False;Property;_HitColor;HitColor;0;0;Create;True;0;0;False;0;False;1,0,0,0;0.8679245,0.05322165,0.05322165,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.CustomExpressionNode;36;-1151.961,105.5653;Inherit;False;float result = 0@$for(int i = 0@ i < hitPositions.Length@ i++)${$	if (i > ArrayLength) {$	return result@$	}$$	float3 hitPos = hitPositions[i].xyz@$	float radius = hitPositions[i].w@$	float dist = distance(hitPos, LocalPos)@$$	if (dist <= radius) {$	float initialSize = initialHitSize[i]@$	float maxSize = initialSize * IncreaseMultiplier@$	float currentAlpha = (radius * 100) / maxSize / 100@$	$	float alphaValue = 1 - currentAlpha@$$	alphaValue = lerp(alphaValue, 0, currentAlpha)@$$	result += alphaValue@$	}$} $return result@;1;False;5;False;justConnect;FLOAT3;0,0,0;In;;Inherit;False;False;LocalPos;FLOAT3;0,0,0;In;;Inherit;False;False;ArrayLength;INT;1;In;;Inherit;False;False;IncreaseMultiplier;FLOAT;0;In;;Inherit;False;False;justConnect1;FLOAT;0;In;;Inherit;False;CycleThoughArray;True;False;0;5;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;INT;1;False;3;FLOAT;0;False;4;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;30;-366.0989,50.42583;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;19;2,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Meta;0;4;Meta;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;True;2;False;-1;False;False;False;False;False;True;1;LightMode=Meta;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;20;2,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Universal2D;0;5;Universal2D;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;1;1;False;-1;0;False;-1;False;False;False;True;True;True;True;True;0;False;-1;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;LightMode=Universal2D;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;18;2,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;DepthOnly;0;3;DepthOnly;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;False;True;False;False;False;False;0;False;-1;False;True;1;False;-1;False;False;True;1;LightMode=DepthOnly;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;17;2,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ShadowCaster;0;2;ShadowCaster;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;False;False;False;True;1;False;-1;True;3;False;-1;False;True;1;LightMode=ShadowCaster;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;15;2,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ExtraPrePass;0;0;ExtraPrePass;5;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;0;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;16;125.1855,48.93672;Float;False;True;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;MyShaders/HitPosition;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;16;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;1;1;False;-1;0;False;-1;False;False;False;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;LightMode=UniversalForward;False;0;Hidden/InternalErrorShader;0;0;Standard;33;Workflow;1;Surface;0;  Refraction Model;0;  Blend;0;Two Sided;1;Transmission;0;  Transmission Shadow;0.5,False,-1;Translucency;0;  Translucency Strength;1,False,-1;  Normal Distortion;0.5,False,-1;  Scattering;2,False,-1;  Direct;0.9,False,-1;  Ambient;0.1,False,-1;  Shadow;0.5,False,-1;Cast Shadows;1;Receive Shadows;1;GPU Instancing;1;LOD CrossFade;1;Built-in Fog;1;Meta Pass;1;Override Baked GI;0;Extra Pre Pass;0;DOTS Instancing;0;Tessellation;0;  Phong;0;  Strength;0.5,False,-1;  Type;0;  Tess;16,False,-1;  Min;10,False,-1;  Max;25,False,-1;  Edge Length;16,False,-1;  Max Displacement;25,False,-1;Vertex Position,InvertActionOnDeselection;1;0;6;False;True;True;True;True;True;False;;0
-WireConnection;36;0;35;0
-WireConnection;36;1;45;0
-WireConnection;36;2;44;0
-WireConnection;36;3;52;0
-WireConnection;36;4;53;0
-WireConnection;30;0;31;0
-WireConnection;30;1;36;0
-WireConnection;16;0;30;0
+-1920;73;820;655;2005.899;556.5225;2.092343;True;False
+Node;AmplifyShaderEditor.PosVertexDataNode;33;-1079.879,-247.862;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TexturePropertyNode;10;-1096.505,-95.46505;Inherit;True;Property;_HitPositions;_HitPositions;1;0;Create;True;0;0;False;0;False;None;None;False;white;LockedToTexture2D;Texture2D;-1;0;1;SAMPLER2D;0
+Node;AmplifyShaderEditor.RangedFloatNode;35;-1064.299,105.2743;Inherit;False;Property;_TextureWidth;TextureWidth;2;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;39;-1090.189,435.817;Inherit;False;Property;_IncreaseMultiplier;IncreaseMultiplier;4;0;Create;True;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.TexturePropertyNode;38;-1099.407,215.7392;Inherit;True;Property;_InitRadii;InitRadii;3;0;Create;True;0;0;False;0;False;None;None;False;white;LockedToTexture2D;Texture2D;-1;0;1;SAMPLER2D;0
+Node;AmplifyShaderEditor.ColorNode;7;-596.5101,-201.6708;Inherit;False;Property;_Color;Color;0;0;Create;True;0;0;False;0;False;0.4245283,0.3264062,0.3264062,0;0.8867924,0.1213064,0.1213064,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.CustomExpressionNode;32;-621.5771,172.0957;Inherit;False; float result = 0@$$for (int i = 0@ i < _TextureWidth@ i++) {$	float xPosToRead = (1 / _TextureWidth) * i@$	float2 posToRead = float2(xPosToRead, 0)@$$	float4 hitData = tex2D(HitPositionsTexture, posToRead)@$	float4 initRadiusData = tex2D(InitPositionsTexture, posToRead)@$$	float initRadius = initRadiusData.w@$	float3 hitPos = hitData.xyz@$	float dist = distance(hitPos, LocalPos)@$	float radius = hitData.w@$$	if (dist <= radius) {$	float maxSize = initRadius * IncreaseMultiplier@$	float currentAlpha = (radius * 100) / maxSize / 100@$$	float alphaValue = 1 - currentAlpha@$$	alphaValue = lerp(alphaValue, 0, currentAlpha)@$$	result += alphaValue@$	}$}$$return result@;3;False;5;False;LocalPos;FLOAT3;0,0,0;In;;Inherit;False;False;HitPositionsTexture;SAMPLER2D;;In;texture;Inherit;False;False;justConnect;INT;0;In;;Inherit;False;False;InitPositionsTexture;SAMPLER2D;;In;;Inherit;False;False;IncreaseMultiplier;FLOAT;0;In;;Inherit;False;My Custom Expression;True;False;0;5;0;FLOAT3;0,0,0;False;1;SAMPLER2D;;False;2;INT;0;False;3;SAMPLER2D;;False;4;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-327.1597,111.7896;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;0,0;Float;False;True;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;HitShader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;16;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;1;1;False;-1;0;False;-1;False;False;False;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;LightMode=UniversalForward;False;0;Hidden/InternalErrorShader;0;0;Standard;33;Workflow;1;Surface;0;  Refraction Model;0;  Blend;0;Two Sided;1;Transmission;0;  Transmission Shadow;0.5,False,-1;Translucency;0;  Translucency Strength;1,False,-1;  Normal Distortion;0.5,False,-1;  Scattering;2,False,-1;  Direct;0.9,False,-1;  Ambient;0.1,False,-1;  Shadow;0.5,False,-1;Cast Shadows;1;Receive Shadows;1;GPU Instancing;1;LOD CrossFade;1;Built-in Fog;1;Meta Pass;1;Override Baked GI;0;Extra Pre Pass;0;DOTS Instancing;0;Tessellation;0;  Phong;0;  Strength;0.5,False,-1;  Type;0;  Tess;16,False,-1;  Min;10,False,-1;  Max;25,False,-1;  Edge Length;16,False,-1;  Max Displacement;25,False,-1;Vertex Position,InvertActionOnDeselection;1;0;6;False;True;True;True;True;True;False;;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;4;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;DepthOnly;0;3;DepthOnly;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;False;True;False;False;False;False;0;False;-1;False;True;1;False;-1;False;False;True;1;LightMode=DepthOnly;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;6;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Universal2D;0;5;Universal2D;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;1;1;False;-1;0;False;-1;False;False;False;True;True;True;True;True;0;False;-1;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;LightMode=Universal2D;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;3;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ShadowCaster;0;2;ShadowCaster;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;False;False;False;True;1;False;-1;True;3;False;-1;False;True;1;LightMode=ShadowCaster;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ExtraPrePass;0;0;ExtraPrePass;5;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;True;1;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;False;False;True;0;False;-1;True;True;True;True;True;0;False;-1;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;0;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;5;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraph.PBRMasterGUI;0;2;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;Meta;0;4;Meta;0;False;False;False;True;0;False;-1;False;False;False;False;False;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;0;0;False;False;False;True;2;False;-1;False;False;False;False;False;True;1;LightMode=Meta;False;0;Hidden/InternalErrorShader;0;0;Standard;0;0
+WireConnection;32;0;33;0
+WireConnection;32;1;10;0
+WireConnection;32;2;35;0
+WireConnection;32;3;38;0
+WireConnection;32;4;39;0
+WireConnection;8;0;7;0
+WireConnection;8;1;32;0
+WireConnection;2;0;8;0
 ASEEND*/
-//CHKSM=B4E6D922F5C4F656D05C44A7280E27AC05DA32FD
+//CHKSM=605A4B0027462F81A054F0B9ADF38F601B6F5CE6

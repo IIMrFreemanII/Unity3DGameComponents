@@ -756,6 +756,11 @@
         </e>
         <e p="GameComponents" t="Include">
           <e p="AmplifyShader" t="Include">
+            <e p="PassingDataWithTextures" t="Include">
+              <e p="HandleHit.cs" t="Include" />
+              <e p="HitController.cs" t="Include" />
+              <e p="HitShader.shader" t="Include" />
+            </e>
             <e p="Shaders" t="Include">
               <e p="HandleHit.cs" t="Include" />
               <e p="HitController.cs" t="Include" />
@@ -840,6 +845,9 @@
             <e p="AutoCalculateVelocity" t="Include">
               <e p="Launcher.cs" t="Include" />
             </e>
+            <e p="HitPositionShaders" t="Include">
+              <e p="HandleCutOffShader.cs" t="Include" />
+            </e>
             <e p="Scripts" t="Include">
               <e p="Arrow.cs" t="Include" />
               <e p="ArrowResistance.cs" t="Include" />
@@ -850,9 +858,6 @@
               <e p="IArrowTarget.cs" t="Include" />
               <e p="Player.cs" t="Include" />
               <e p="TrajectoryRenderer.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="HandleCutOffShader.cs" t="Include" />
             </e>
           </e>
           <e p="UIElements" t="Include">
@@ -867,6 +872,9 @@
             </e>
           </e>
           <e p="Utils" t="Include">
+            <e p="CameraScripts" t="Include">
+              <e p="Camera3DMovement.cs" t="Include" />
+            </e>
             <e p="DrawUtil.cs" t="Include" />
             <e p="PhysicsCalculations" t="Include">
               <e p="PhysicsCalcUtil.cs" t="Include" />

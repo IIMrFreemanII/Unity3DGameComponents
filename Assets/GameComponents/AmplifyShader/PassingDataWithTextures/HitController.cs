@@ -1,14 +1,14 @@
 ﻿using Extensions;
 using UnityEngine;
 
-namespace GameComponents.AmplifyShader.Shaders
+namespace GameComponents.AmplifyShader.PassingDataWithTextures
 {
     public class HitController : MonoBehaviour
     {
         private Camera cam;
 
-        public float maxHitRadius = 0.1f;
-        public float minHitRadius = 0.5f;
+        public float maxHitRadius = 0.015f;
+        public float minHitRadius = 0.01f;
 
         private void Start()
         {
