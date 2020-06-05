@@ -761,11 +761,6 @@
               <e p="HitController.cs" t="Include" />
               <e p="HitShader.shader" t="Include" />
             </e>
-            <e p="Shaders" t="Include">
-              <e p="HandleHit.cs" t="Include" />
-              <e p="HitController.cs" t="Include" />
-              <e p="HitPosition.shader" t="Include" />
-            </e>
           </e>
           <e p="CameraScripts" t="Include">
             <e p="Zoom" t="Include">
@@ -826,13 +821,6 @@
               <e p="SlotData.cs" t="Include" />
             </e>
           </e>
-          <e p="OdinLearning" t="Include">
-            <e p="Player.cs" t="Include" />
-            <e p="Training" t="Include">
-              <e p="AddressableTest.cs" t="Include" />
-              <e p="ExampleScript.cs" t="Include" />
-            </e>
-          </e>
           <e p="Tragectory" t="Include">
             <e p="ArcherTopDownController" t="Include">
               <e p="Archer" t="Include">
@@ -844,9 +832,6 @@
             </e>
             <e p="AutoCalculateVelocity" t="Include">
               <e p="Launcher.cs" t="Include" />
-            </e>
-            <e p="HitPositionShaders" t="Include">
-              <e p="HandleCutOffShader.cs" t="Include" />
             </e>
             <e p="Scripts" t="Include">
               <e p="Arrow.cs" t="Include" />

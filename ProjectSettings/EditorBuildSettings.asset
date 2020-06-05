@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameComponents/InventorySystem/Scene/InventoryScene.unity
-    guid: e4aa982bf6085214580ac263bdcb0bff
+    path: Assets/GameComponents/AmplifyShader/PassingDataWithTextures/PassingDataWithTexture.unity
+    guid: cb613ab443b18ec4591990c2103adcab
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 1321f7ab7e8c5aa459db00d447a91a93,
       type: 2}

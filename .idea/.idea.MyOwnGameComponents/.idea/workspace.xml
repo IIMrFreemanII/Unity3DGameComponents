@@ -16,46 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement hit position shader;&#10;add amplify shader package;&#10;implement simple curve editor;">
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/AmplifyShaderScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/AmplifyShaderScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/Cube.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/Cube.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HandleHit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HandleHit.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitPosition.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitPosition.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/Sphere.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/Sphere.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/CutOffMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/CutOffMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/CutOffShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/CutOffShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionGraph.shadersubgraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionGraph.shadersubgraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HitPositionShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/Sphere.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/Sphere.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement passing array of hit positions to shader with textures." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -290,7 +251,7 @@
       <workItem from="1591118750941" duration="7993000" />
       <workItem from="1591197960948" duration="8775000" />
       <workItem from="1591286155094" duration="14544000" />
-      <workItem from="1591372966026" duration="477000" />
+      <workItem from="1591372966026" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -467,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591202942134</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="implement passing array of hit positions to shader with textures.">
+      <created>1591373553008</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1591373553008</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +489,8 @@
     <MESSAGE value="implement inventory" />
     <MESSAGE value="implement custom editor with UIElements" />
     <MESSAGE value="implement hit position shader;&#10;add amplify shader package;&#10;implement simple curve editor;" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement hit position shader;&#10;add amplify shader package;&#10;implement simple curve editor;" />
+    <MESSAGE value="implement passing array of hit positions to shader with textures." />
+    <option name="LAST_COMMIT_MESSAGE" value="implement passing array of hit positions to shader with textures." />
   </component>
   <component name="WindowStateProjectService">
     <state width="416" height="618" key="DebuggerActiveHint" timestamp="1590599896890">

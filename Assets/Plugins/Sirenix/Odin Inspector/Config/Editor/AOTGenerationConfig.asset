@@ -16,55 +16,5 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 637262113525499438
-  supportSerializedTypes:
-  - TypeName: System.Collections.Generic.Dictionary`2[[GameComponents.InventorySystem.Inventory.SlotType,
-      Assembly-CSharp],[System.Collections.Generic.List`1[[GameComponents.InventorySystem.Inventory.InventoryUiSlot,
-      Assembly-CSharp]], mscorlib]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.Dictionary`2[[GameComponents.InventorySystem.Inventory.SlotType,
-      Assembly-CSharp],[System.Collections.Generic.List`1[[GameComponents.InventorySystem.Inventory.SlotData,
-      Assembly-CSharp]], mscorlib]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[GameComponents.InventorySystem.Inventory.SlotType,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.IEqualityComparer`1[[GameComponents.InventorySystem.Inventory.SlotType,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Int32, mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: GameComponents.InventorySystem.Inventory.InventoryData, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: GameComponents.InventorySystem.Inventory.InventoryUiSlot, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.List`1[[GameComponents.InventorySystem.Inventory.InventoryUiSlot,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Collections.Generic.List`1[[GameComponents.InventorySystem.Inventory.SlotData,
-      Assembly-CSharp]], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Object, mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.Object[], mscorlib
-    IsCustom: 0
-    Emit: 1
-  - TypeName: GameComponents.InventorySystem.Inventory.SlotData, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: GameComponents.InventorySystem.Inventory.SlotType, Assembly-CSharp
-    IsCustom: 0
-    Emit: 1
-  - TypeName: System.String, mscorlib
-    IsCustom: 0
-    Emit: 1
+  lastScan: 637269822031398236
+  supportSerializedTypes: []
