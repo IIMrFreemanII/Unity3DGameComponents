@@ -10,7 +10,7 @@ namespace GameComponents.CurveEditor.Editor
         private PathCreator creator;
         private Path Path => creator.path;
 
-        private const float segmentSelectDistThreshold = 0.1f;
+        private const float SegmentSelectDistThreshold = 0.1f;
         private int selectedSegmentIndex = -1;
         
         public override void OnInspectorGUI()
@@ -95,7 +95,7 @@ namespace GameComponents.CurveEditor.Editor
 
             if (guiEvent.type == EventType.MouseMove)
             {
-                float minDistToSegment = segmentSelectDistThreshold;
+                float minDistToSegment = SegmentSelectDistThreshold;
                 int newSelectedSegmentIndex = -1;
 
                 for (int i = 0; i < Path.NumSegments; i++)
