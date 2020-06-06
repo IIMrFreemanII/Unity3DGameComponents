@@ -16,7 +16,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement passing array of hit positions to shader with textures." />
+    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="remove extra components">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +32,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/ExampleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/DoCreateShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/Universal/2DLit.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies.meta" root0="FORCE_HIGHLIGHTING" />
@@ -35,7 +40,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/GrabPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/SlotData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/SyncVarAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/JustUpdate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TestUpdate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +56,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TestCache.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/AddressableTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,7 +103,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/HitPositionShaders/HandleCutOffShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -147,9 +149,7 @@
         <option value="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Path.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/PathCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTexture/HitController.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/HitPositionShaders/HandleCutOffShader.cs" />
@@ -157,6 +157,8 @@
         <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HandleHit.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +181,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -252,6 +254,8 @@
       <workItem from="1591197960948" duration="8775000" />
       <workItem from="1591286155094" duration="14544000" />
       <workItem from="1591372966026" duration="605000" />
+      <workItem from="1591375019548" duration="1513000" />
+      <workItem from="1591433951392" duration="6246000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -435,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591373553008</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="remove extra components">
+      <created>1591375065221</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1591375065221</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +501,8 @@
     <MESSAGE value="implement custom editor with UIElements" />
     <MESSAGE value="implement hit position shader;&#10;add amplify shader package;&#10;implement simple curve editor;" />
     <MESSAGE value="implement passing array of hit positions to shader with textures." />
-    <option name="LAST_COMMIT_MESSAGE" value="implement passing array of hit positions to shader with textures." />
+    <MESSAGE value="remove extra components" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove extra components" />
   </component>
   <component name="WindowStateProjectService">
     <state width="416" height="618" key="DebuggerActiveHint" timestamp="1590599896890">
@@ -574,16 +586,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="514" y="38" key="RollbackChangesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589383291278" />
-    <state x="-1459" y="165" key="SettingsEditor" timestamp="1590681427976">
+    <state x="-1459" y="165" key="SettingsEditor" timestamp="1591434601363">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590681427976" />
+    <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591434601363" />
     <state x="369" y="115" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588968242464" />
-    <state x="442" y="197" key="Vcs.Push.Dialog.v2" timestamp="1591202951335">
+    <state x="442" y="197" key="Vcs.Push.Dialog.v2" timestamp="1591375081525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590604307831" />
-    <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591202951335" />
+    <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591375081525" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1590521802224">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -605,10 +617,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587747085341" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589828800379">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591434533272">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589828800379" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591434533272" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589395929234" />
   </component>
   <component name="XDebuggerManager">
