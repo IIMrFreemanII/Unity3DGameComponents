@@ -16,14 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement ability to close curve;&#10;implement auto set control points;">
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" afterDir="false" />
-    </list>
+    <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="implement ability delete anchor point;&#10;implement ability to insert new anchor point;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TestCache.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///CurveScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/ReadMe.md.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,6 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/MovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/PlayerInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Scene.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUIController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -256,7 +252,7 @@
       <workItem from="1591286155094" duration="14544000" />
       <workItem from="1591372966026" duration="605000" />
       <workItem from="1591375019548" duration="1513000" />
-      <workItem from="1591433951392" duration="16290000" />
+      <workItem from="1591433951392" duration="16658000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -454,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591440666621</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="implement ability delete anchor point;&#10;implement ability to insert new anchor point;">
+      <created>1591462224267</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1591462224267</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +514,8 @@
     <MESSAGE value="implement passing array of hit positions to shader with textures." />
     <MESSAGE value="remove extra components" />
     <MESSAGE value="implement ability to close curve;&#10;implement auto set control points;" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement ability to close curve;&#10;implement auto set control points;" />
+    <MESSAGE value="implement ability delete anchor point;&#10;implement ability to insert new anchor point;" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement ability delete anchor point;&#10;implement ability to insert new anchor point;" />
   </component>
   <component name="WindowStateProjectService">
     <state width="416" height="618" key="DebuggerActiveHint" timestamp="1590599896890">
@@ -600,10 +604,10 @@
     </state>
     <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591434601363" />
     <state x="369" y="115" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588968242464" />
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591440674407">
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591462454199">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591440674407" />
+    <state x="-1368" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591462454199" />
     <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591375081525" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1590521802224">
       <screen x="-1920" y="0" width="1920" height="1040" />
