@@ -33,6 +33,46 @@ namespace GameComponents.CurveEditor.Scripts
 
         public Vector2 this[int i] => points[i];
 
+        public bool IsClosed
+        {
+            get => isClosed;
+            set
+            {
+                if (isClosed != value)
+                {
+                    isClosed = value;
+
+                    if (isClosed)
+                    {
+                        int firstFromEnd = points.Count - 1;
+                        int secondFromEnd = points.Count - 2;
+            
+                        Vector2 firstControlPoint = points[firstFromEnd] * 2 - points[secondFromEnd];
+                        points.Add(firstControlPoint);
+
+                        int firstPoint = 0;
+                        int secondPoint = 1;
+                        points.Add(points[firstPoint] * 2 - points[secondPoint]);
+
+                        if (autoSetControlPoints)
+                        {
+                            AutoSetAnchorControlPoints(0);
+                            AutoSetAnchorControlPoints(points.Count - 3);
+                        }
+                    }
+                    else
+                    {
+                        points.RemoveRange(points.Count - 2, 2);
+
+                        if (autoSetControlPoints)
+                        {
+                            AutoSetStartAndEndControls();
+                        }
+                    }
+                }
+            }
+        }
+
         public bool AutoSetControlPoints
         {
             get => autoSetControlPoints;
@@ -73,6 +113,42 @@ namespace GameComponents.CurveEditor.Scripts
             if (autoSetControlPoints)
             {
                 AutoSetAllAffectedControlPoints(points.Count - 1);
+            }
+        }
+
+        public void SplitSegment(Vector2 anchorPos, int segmentIndex)
+        {
+            points.InsertRange(segmentIndex * 3 + 2, new Vector2[] {Vector2.zero, anchorPos, Vector2.zero});
+
+            if (autoSetControlPoints)
+            {
+                AutoSetAllAffectedControlPoints(segmentIndex * 3 + 3);
+            }
+            else
+            {
+                AutoSetAnchorControlPoints(segmentIndex * 3 + 3);
+            }
+        }
+
+        public void DeleteSegment(int anchorIndex)
+        {
+            if (NumSegments > 2 || !isClosed && NumSegments > 1)
+            { 
+                if (anchorIndex == 0)
+                {
+                    if (isClosed)
+                    {
+                        points[points.Count - 1] = points[2];
+                        points.RemoveRange(0, 3);
+                    }
+                } else if (anchorIndex == points.Count - 1 && !isClosed)
+                {
+                    points.RemoveRange(anchorIndex - 2, 3);
+                }
+                else
+                {
+                    points.RemoveRange(anchorIndex - 1, 3);
+                }
             }
         }
 
@@ -136,39 +212,6 @@ namespace GameComponents.CurveEditor.Scripts
                 }
             }
             
-        }
-
-        public void ToggleClosed()
-        {
-            isClosed = !isClosed;
-
-            if (isClosed)
-            {
-                int firstFromEnd = points.Count - 1;
-                int secondFromEnd = points.Count - 2;
-            
-                Vector2 firstControlPoint = points[firstFromEnd] * 2 - points[secondFromEnd];
-                points.Add(firstControlPoint);
-
-                int firstPoint = 0;
-                int secondPoint = 1;
-                points.Add(points[firstPoint] * 2 - points[secondPoint]);
-
-                if (autoSetControlPoints)
-                {
-                    AutoSetAnchorControlPoints(0);
-                    AutoSetAnchorControlPoints(points.Count - 3);
-                }
-            }
-            else
-            {
-                points.RemoveRange(points.Count - 2, 2);
-
-                if (autoSetControlPoints)
-                {
-                    AutoSetStartAndEndControls();
-                }
-            }
         }
 
         private int LoopIndex(int i)
