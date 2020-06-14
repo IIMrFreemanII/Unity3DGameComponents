@@ -17,13 +17,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08216ba3-a1ed-40e0-8d39-643828291008" name="Default Changelist" comment="add ReadMe.md on main page">
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Bezier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Bezier.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/IState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/IState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/StateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/StateMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/Transition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/Transition.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Editor/FieldOfViewEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Editor/FieldOfViewEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/FieldOfView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/FieldOfView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/HealthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/HealthController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightAI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Attack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Attack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Idle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Idle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/MoveToPoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/MoveToPoint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/SearchPointToMove.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/SearchPointToMove.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/TimeOut.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/TimeOut.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/RootMotionController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/RootMotionController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/Timer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/Timer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyOwnGameComponents/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,73 +66,96 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/IIMrFreemanII/Unity3DGameComponents.git" />
+      </set>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/DoCreateShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/Universal/2DLit.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Examples/PathPlacer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Editor/ShaderGUI/Shaders/ParticlesUnlitShader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Weapon/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Weapon/WeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArcherTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/GrabPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/623DD1C5-ED6E-43BC-8659-6AF9203BEC21/76/2c7c2e28/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/SlotData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/SyncVarAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Test/JustUpdate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Test/TestUpdate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Sphere.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HandleHit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Default/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Idle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Test/TestCache.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///CurveScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Examples/PathPlacer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Bezier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/DrawUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/GameObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/21/4b406213/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Attack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E98ED036-8295-432E-8C11-E52D6243EE11/63/e31767de/TextureFormat.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/ItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/Sword.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/MoveToPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CameraScripts/Zoom/CameraZoom.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/GroundLayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUiSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/RootMotionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/IArrowTarget.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/ArrowResistance.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/ReadMe.md.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/HandleWeaponPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/TrajectoryRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D966F060-1D26-456D-9165-2D8D979D3635/30/d6af4604/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/SphereBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/TimeOut.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Editor/ShaderGUI/Shaders/ParticlesUnlitShader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/Transition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/SearchPointToMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/GrabPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/SyncVarAttributeDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/ArrowPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Arrow.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/HealthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/AutoCalculateVelocity/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Editor/FieldOfViewEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E98ED036-8295-432E-8C11-E52D6243EE11/6d/e55f9991/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/FieldOfView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/ItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/Sword.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CameraScripts/Zoom/CameraZoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/Bow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUiSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Data/Graphs/GraphData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Teammate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/ReadMe.md.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/GrabItems/GrabItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/Scripts/Bow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D966F060-1D26-456D-9165-2D8D979D3635/30/d6af4604/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/PhysicsCalculations/PhysicsCalcUtil.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/UIElements/SphereBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ItemInfoController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/FPSController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,65 +163,64 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/FPSController/Scripts/Utils/PlayerInputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Scene.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scene/CurveScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Tragectory/ArcherTopDownController/Archer/BowTopDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameComponents/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemData/ItemDataSO.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventorySO.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryData.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/InventoryDataSO/InventorySO.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/SlotData.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/AddressableTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/OdinLearning/Training/ExampleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/GrabItems/GrabItems.cs" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Assets/JsonDotNet/link.xml" />
-        <option value="$PROJECT_DIR$/Packages/manifest.json" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/ChashUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/CacheUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/CacheUtil.cs" />
-        <option value="$PROJECT_DIR$/Assets/Test/TestCache.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryUiSlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/ScriptableObjects/ItemDataSO/ItemDataSO.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryData.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/InventorySystem/Inventory/InventoryController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/Spheres.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/Sphere.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/Sphere.uxml" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/SphereBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uxml" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/UI/sphere.uss" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/UIElements/Editor/SpheresEditor_UIElements.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/HandleCutOffShader.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/Shaders/Editor/VectorsArray.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/LUT/ShaderDynamicArray.shader" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/LUT/ShaderDynamicArray.cs" />
-        <option value="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/DoCreateShader.cs" />
-        <option value="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateAdditionalDirectivesHelper.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Path.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/PathCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HitController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTexture/HitController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Tragectory/HitPositionShaders/HandleCutOffShader.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/Shaders/HandleHit.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HitController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/CameraScripts/Camera3DMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/AmplifyShader/PassingDataWithTextures/HandleHit.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/PathCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/ReadMe.md" />
-        <option value="$PROJECT_DIR$/ReadMe.md" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Bezier.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Scripts/Path.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/PathPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Examples/PathPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameComponents/CurveEditor/Editor/PathEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/TimeUtils.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/WanderState.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/EnemyAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/test.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/Transition.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/Wander.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/KnightAI/KnightAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/BotScripts/KnightAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/Idle.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/SearchPointToMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/WaitForTime.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/Utils/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/TimeOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/MoveToPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/States/StopMoving.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/AIScripts/KnightAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/newStateMachine/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/StateMachine/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/StateMachine/Transition.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/StateMachine/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/AIStateMachine/Transition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/HarvestResource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/Flee.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/MoveToSelectedResource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/PlaceResourcesInStockpile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/ReturnToStockpile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/States/SearchForResource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/Beast.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/EnemyDetector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/GatherableResource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/Gatherer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/StockPile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/StateMachineCode/Scripts/Entities/WoodDropper.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Idle.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/MoveToPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/SearchPointToMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/TimeOut.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Editor/FieldOfViewEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/WeaponController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Teammate.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/KnightStates/Attack.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/FieldOfView.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Weapon/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/Weapon/WeaponController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameComponents/AI/Scripts/HealthController.cs" />
       </list>
     </option>
   </component>
@@ -188,7 +243,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -263,6 +318,17 @@
       <workItem from="1591372966026" duration="605000" />
       <workItem from="1591375019548" duration="1513000" />
       <workItem from="1591433951392" duration="22901000" />
+      <workItem from="1591521678285" duration="12951000" />
+      <workItem from="1591551729654" duration="5893000" />
+      <workItem from="1591632186849" duration="9185000" />
+      <workItem from="1591890495865" duration="192000" />
+      <workItem from="1591890722550" duration="3825000" />
+      <workItem from="1591895768825" duration="80000" />
+      <workItem from="1591896007845" duration="2585000" />
+      <workItem from="1592041879632" duration="1187000" />
+      <workItem from="1592043326836" duration="25068000" />
+      <workItem from="1592120092156" duration="6928000" />
+      <workItem from="1592130355195" duration="16837000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589138769585</created>
@@ -536,6 +602,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add ReadMe.md on main page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="370" y="1" key="CommitChangelistDialog2" timestamp="1592153277768">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="370" y="1" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592153277768" />
     <state width="416" height="618" key="DebuggerActiveHint" timestamp="1590599896890">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -608,20 +678,20 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588967106259" />
-    <state x="-1321" y="1" width="454" height="716" key="RiderGenerateDialog" timestamp="1590252743741">
+    <state x="-1321" y="1" width="454" height="716" key="RiderGenerateDialog" timestamp="1592134177293">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1321" y="1" key="RiderGenerateDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590252743741" />
+    <state x="-1321" y="1" key="RiderGenerateDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592134177293" />
     <state x="479" y="1" width="454" height="716" key="RiderGenerateDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589913999883" />
     <state x="514" y="38" key="RollbackChangesDialog" timestamp="1589383291278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="514" y="38" key="RollbackChangesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589383291278" />
-    <state x="-1459" y="165" key="SettingsEditor" timestamp="1591434601363">
+    <state x="-1459" y="165" key="SettingsEditor" timestamp="1592051527120">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591434601363" />
-    <state x="369" y="115" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1588968242464" />
+    <state x="-1459" y="165" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592051527120" />
+    <state x="369" y="115" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591893590115" />
     <state x="-1368" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591462723521">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -643,19 +713,19 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" key="dock-window-1/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591463218038" />
-    <state x="-1281" y="239" width="787" height="562" key="find.popup" timestamp="1590318806667">
+    <state x="-1281" y="239" width="787" height="614" key="find.popup" timestamp="1592125233166">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1281" y="239" width="787" height="562" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590318806667" />
+    <state x="-1281" y="239" width="787" height="614" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1592125233166" />
     <state x="511" y="189" width="777" height="562" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590242389333" />
     <state x="-1304" y="240" key="run.anything.popup" timestamp="1587747085341">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587747085341" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591434533272">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591895300813">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591434533272" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591895300813" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1589395929234" />
   </component>
   <component name="XDebuggerManager">

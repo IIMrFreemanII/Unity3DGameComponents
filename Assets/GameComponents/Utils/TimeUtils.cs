@@ -9,11 +9,11 @@ namespace GameComponents.Utils
         
         public static void SetInterval(Action callback, float callsPerSec)
         {
-            float timeToRayCast = 1 / callsPerSec;
+            float timeToCall = 1 / callsPerSec;
         
             if (_currentTime <= Time.time)
             {
-                _currentTime = Time.time + timeToRayCast;
+                _currentTime = Time.time + timeToCall;
                 callback?.Invoke();
             }
         }

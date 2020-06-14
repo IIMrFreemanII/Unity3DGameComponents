@@ -754,7 +754,75 @@
             <e p="SimpleCameraController.cs" t="Include" />
           </e>
         </e>
+        <e p="Demigiant" t="Include">
+          <e p="DemiLib" t="Include">
+            <e p="Core" t="Include">
+              <e p="DemiLib.xml" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DemiEditor.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="DOTweenPro" t="Include">
+            <e p="DOTweenAnimation.cs" t="Include" />
+            <e p="DOTweenProShortcuts.cs" t="Include" />
+            <e p="DOTweenTextMeshPro.cs" t="Include" />
+            <e p="DOTweenTk2d.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="DOTweenAnimationInspector.cs" t="Include" />
+              <e p="DOTweenPreviewManager.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="readme_DOTweenPro.txt" t="Include" />
+        </e>
         <e p="GameComponents" t="Include">
+          <e p="AI" t="Include">
+            <e p="AIStateMachine" t="Include">
+              <e p="IState.cs" t="Include" />
+              <e p="StateMachine.cs" t="Include" />
+              <e p="Transition.cs" t="Include" />
+            </e>
+            <e p="Dynamic Sword Animset" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Animation_view.cs" t="Include" />
+                <e p="Blue_CameraControll.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Editor" t="Include">
+              <e p="FieldOfViewEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="FieldOfView.cs" t="Include" />
+              <e p="HealthController.cs" t="Include" />
+              <e p="KnightAI.cs" t="Include" />
+              <e p="KnightStates" t="Include">
+                <e p="Attack.cs" t="Include" />
+                <e p="Idle.cs" t="Include" />
+                <e p="MoveToPoint.cs" t="Include" />
+                <e p="SearchPointToMove.cs" t="Include" />
+                <e p="TimeOut.cs" t="Include" />
+              </e>
+              <e p="RootMotionController.cs" t="Include" />
+              <e p="Teammate.cs" t="Include" />
+              <e p="Weapon" t="Include">
+                <e p="Sword.cs" t="Include" />
+                <e p="WeaponController.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="AmplifyShader" t="Include">
             <e p="PassingDataWithTextures" t="Include">
               <e p="HandleHit.cs" t="Include" />
@@ -868,6 +936,7 @@
             <e p="PhysicsCalculations" t="Include">
               <e p="PhysicsCalcUtil.cs" t="Include" />
             </e>
+            <e p="Timer.cs" t="Include" />
             <e p="TimeUtils.cs" t="Include" />
           </e>
         </e>
@@ -896,11 +965,6 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="Test" t="Include">
-          <e p="JustUpdate.cs" t="Include" />
-          <e p="TestCache.cs" t="Include" />
-          <e p="TestUpdate.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
