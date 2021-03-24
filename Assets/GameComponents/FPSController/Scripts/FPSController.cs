@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 // Drag this on your player
 namespace GameComponents.FPSController
@@ -14,6 +15,8 @@ namespace GameComponents.FPSController
         private CameraController _cameraController;
         private MovementController _movementController;
         private PlayerInputController _playerInputController;
+
+        public bool lockCursor;
         
         [Range(0, 2)] public float rotationSensitivity = 1f;
 
@@ -29,6 +32,11 @@ namespace GameComponents.FPSController
             _movementController.Initialize();
         }
 
+        private void Start()
+        {
+            Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
+        }
+
         private void LateUpdate()
         {
             _cameraController.UpdateCamera();
@@ -36,12 +44,14 @@ namespace GameComponents.FPSController
 
         private void FixedUpdate()
         {
-            _movementController.UpdateMovement();
+            _movementController.HandleMovement();
+            _movementController.HandleJump();
         }
 
         private void Update()
         {
             _playerInputController.UpdateInput();
+            _movementController.HandleRotation();
         }
     }
 }

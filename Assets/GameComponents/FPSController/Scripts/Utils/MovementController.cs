@@ -53,23 +53,22 @@ namespace GameComponents.FPSController
             }
         }
 
-        public void UpdateMovement()
-        {
-            HandleMovement();
-            HandleRotation();
-            HandleJump();
-        }
-
-        private void HandleRotation()
+        /// <summary>
+        /// Should be called in Update
+        /// </summary>
+        public void HandleRotation()
         {
             float deltaMouseX = _playerInputController.DeltaMouseX;
-            float rotationSensitivity = _fpsController.rotationSensitivity;
             bool isRotating = Mathf.Abs(deltaMouseX) > 0;
 
-            if (isRotating) transform.Rotate(new Vector3(0, deltaMouseX * rotationSensitivity, 0));
+            if (isRotating)
+                transform.localRotation *= Quaternion.Euler(0, deltaMouseX * _fpsController.rotationSensitivity, 0);
         }
 
-        private void HandleMovement()
+        /// <summary>
+        /// Should be called in FixedUpdate
+        /// </summary>
+        public void HandleMovement()
         {
             var (
                     horizontal,
@@ -119,7 +118,10 @@ namespace GameComponents.FPSController
             CounterMove();
         }
 
-        private void HandleJump()
+        /// <summary>
+        /// Should be called in FixedUpdate
+        /// </summary>
+        public void HandleJump()
         {
             float jump = _playerInputController.Jump;
 
